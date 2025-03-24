@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width:device-width, initial-scale=1.0">
+    <title>Jaipur Blue Pottery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Apple Garamond", serif;
+        }
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #0033a0;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        .nav-auth-container {
+            display: flex;
+            align-items: center;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        nav ul li a:hover {
+            background-color: #eee;
+            transform: translateY(-3px);
+        }
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+            margin-left: 20px;
+        }
+        .auth-buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.2s ease;
+        }
+        .sign-in {
+            background: #eee;
+            color: #333;
+        }
+        .register {
+            background: #0033a0;
+            color: white;
+        }
+        .auth-buttons button:hover {
+            transform: scale(1.05);
+        }
+        .banner {
+            background-image: url('https://media.gettyimages.com/id/997424522/photo/moroccan-ceramic-handcrafts.jpg?s=1024x1024&w=gi&k=20&c=KAev7pTs_SMeergNmk2SB2_BcdQE31IU2f6o40Myyko=');
+            background-size: cover;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+        .banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+        .banner h1 {
+            font-size: 48px;
+            font-weight: bold;
+            z-index: 2;
+            position: relative;
+        }
+        .slide-container {
+            display: flex;
+            flex-direction: column;
+            padding: 40px 20px;
+            gap: 30px;
+        }
+        .slide {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .slide:hover {
+            transform: translateY(-5px);
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease; /* Add transition */
+        }
+        .slide:hover img {
+            transform: scale(1.1); /* Scale image on hover */
+        }
+        .slide-text {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            font-size: 32px;
+            color: white;
+            font-weight: 600;
+            background: rgba(0, 51, 160, 0.8);
+            padding: 10px 20px;
+            border-radius: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        footer {
+            background: #0033a0;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px 15px 0 0;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        /* Fun animations */
+        .logo img {
+            animation: spin 3s linear infinite;
+        }
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logog.webp" alt="Jaipur Blue Pottery Logo">
+            Jaipur Blue Pottery
+        </div>
+        <div class="nav-auth-container">
+            <nav>
+                <ul>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="sign-in">Sign in</button>
+                <button class="register">Register</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner">
+        <h1>Welcome to Jaipur Blue Pottery</h1> 
+    </div>
+
+    <div class="slide-container">
+        <div class="slide">
+            <img src="blu2.jpg" alt="Creators">
+            <div class="slide-text">Meet The Creators</div>
+        </div>
+        <div class="slide">
+            <img src="blu3.jpg" alt="History">
+            <div class="slide-text">Unravel The History</div>
+        </div>
+        <div class="slide">
+            <img src="blu1.jpg" alt="Products">
+            <div class="slide-text">Explore The Products</div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Jaipur Blue Pottery. All rights reserved.</p>
+    </footer>
+</body>
+</html>
